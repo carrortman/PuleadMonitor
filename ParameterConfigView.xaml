@@ -1,0 +1,263 @@
+﻿<Window x:Class="PuleadMonitor.ParameterConfigView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PuleadMonitor"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="400"
+      Title="ParameterConfigView">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock Text="温湿度参数设定" VerticalAlignment="Center" />
+        </Grid>
+        <Border Grid.Row="1" BorderBrush="Aquamarine" BorderThickness ="1">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.4*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock Text="成品库1-1 参数设置" FontSize="8"/>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="温度值设定" FontSize="8"/>
+                        <TextBox  Text="{Binding ProductSetTemp1,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1" >
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="温度最小值设定" FontSize="8"/>
+                        <TextBox Text="{Binding ProductSetTemp1Min,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="温度最大值设定" FontSize="8"/>
+                        <TextBox Text="{Binding ProductSetTemp1Max,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"></TextBox>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="0">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="湿度值设定" FontSize="8"/>
+                        <TextBox  Text="{Binding ProductSetHum1,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1" >
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="湿度最小值设定" FontSize="8"/>
+                        <TextBox Text="{Binding ProductSetHum1Min,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="2">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="湿度最大值设定" FontSize="8"/>
+                        <TextBox Text="{Binding ProductSetHum1Max,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"></TextBox>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Border>
+
+
+
+        <Border  Grid.Row="3" BorderBrush="Aqua" BorderThickness="1">
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.4*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock Text="成品库1-2 参数设置" FontSize="8"/>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="温度值设定" FontSize="8"/>
+                        <TextBox Text="{Binding ProductSetTemp2,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" ></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1" >
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="温度最小值设定" FontSize="8"/>
+                        <TextBox Text="{Binding ProductSetTemp2Min,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" ></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="温度最大值设定" FontSize="8"/>
+                        <TextBox Text="{Binding ProductSetTemp2Max,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" ></TextBox>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="0">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="湿度值设定" FontSize="8"/>
+                        <TextBox Text="{Binding ProductSetHum2,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" ></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1" >
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="湿度最小值设定" FontSize="8"/>
+                        <TextBox Text="{Binding ProductSetHum2Min,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="2">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="湿度最大值设定" FontSize="8"/>
+                        <TextBox Text="{Binding ProductSetHum2Max,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"></TextBox>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="5" BorderBrush="Aqua" BorderThickness="1">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.4*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock Text="原材料库1-1 参数设置" FontSize="8"/>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="温度值设定" FontSize="8"/>
+                        <TextBox Text="{Binding MaterialSetTemp1,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1" >
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="温度最小值设定" FontSize="8"/>
+                        <TextBox Text="{Binding MaterialSetTemp1Min,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="温度最大值设定" FontSize="8"/>
+                        <TextBox Text="{Binding MaterialSetTemp1Max,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"></TextBox>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="0">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="湿度值设定" FontSize="8"/>
+                        <TextBox Text="{Binding MaterialSetHum1,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" ></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1" >
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="湿度最小值设定" FontSize="8"/>
+                        <TextBox Text="{Binding MaterialSetHum1Min,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" ></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="2">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="湿度最大值设定" FontSize="8"/>
+                        <TextBox Text="{Binding MaterialSetHum1Max,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" ></TextBox>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="7" BorderBrush="Aqua" BorderThickness="1">
+            <Grid Grid.Row="7">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.4*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock Text="原材料库1-2 参数设置" FontSize="8"/>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="温度值设定" FontSize="8"/>
+                        <TextBox  Text="{Binding MaterialSetTemp2,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" ></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1" >
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="温度最小值设定" FontSize="8"/>
+                        <TextBox Text="{Binding MaterialSetTemp2Min,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" ></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="温度最大值设定" FontSize="8"/>
+                        <TextBox Text="{Binding MaterialSetTemp2Max,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" ></TextBox>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="0">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="湿度值设定" FontSize="8"/>
+                        <TextBox Text="{Binding MaterialSetHum2,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" ></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1" >
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="湿度最小值设定" FontSize="8"/>
+                        <TextBox Text="{Binding MaterialSetHum2Min,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" ></TextBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="2">
+                    <StackPanel Orientation="Vertical" Margin="2">
+                        <TextBlock Text="湿度最大值设定" FontSize="8"/>
+                        <TextBox Text="{Binding MaterialSetHum2Max,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" ></TextBox>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="9">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Width="60" Height="25" Content="确认" Click="Button_Click_1"></Button>
+            </Grid>
+            <Grid Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Width="60" Height="25" Content="取消" Click="Button_Click"></Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
